@@ -3,3 +3,5 @@ client:
   host: "localhost:3000"
 post:
   content_max_length: 300
+user:
+  valid_email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

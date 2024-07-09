@@ -1,2 +1,12 @@
 vi:
   hello: "Xin chào"
+  form_error:
+    template: "Đã xuất hiện %{count} lỗi."
+  register:
+    title: "Đăng ký"
+    form:
+      name: "Tên của bạn"
+      email: "Email của bạn"
+      password: "Mật khẩu của bạn"
+      submit: "Đăng ký"
+    error: "Oops đã có lỗi xảy ra."
