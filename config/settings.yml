@@ -1,0 +1,5 @@
+enabled_locales: ["en", "vi"]
+client:
+  host: "localhost:3000"
+post:
+  content_max_length: 300
