@@ -18,5 +18,14 @@ module RailsTutorial
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Where the I18n library should search for translation files
+    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+
+    # Permitted locales available for the application
+    I18n.available_locales = [:vi, :en]
+
+    # Set default locale to something other than :en
+    I18n.default_locale = :vi
   end
 end
