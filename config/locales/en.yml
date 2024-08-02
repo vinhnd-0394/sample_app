@@ -10,3 +10,17 @@ en:
       password: "Your password"
       submit: "Register"
     error: "Oops something went wrong."
+  login:
+    title: "Login"
+    form:
+      email: "Your email"
+      password: "Your password"
+      submit: "Login"
+    failed:
+      message: "Invalid email or password"
+    success:
+      message: "Login successfully"
+  logout:
+    title: "Logout"
+    success:
+      message: "Logout successfully"
