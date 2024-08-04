@@ -1,2 +1,12 @@
 en:
   hello: "Hello world"
+  form_error:
+    template: "The form contains %{count} error."
+  register:
+    title: "Register"
+    form:
+      name: "Your name"
+      email: "Your email"
+      password: "Your password"
+      submit: "Register"
+    error: "Oops something went wrong."

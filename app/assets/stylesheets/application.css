@@ -1,15 +1,31 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import 'variables.css';
+
+.alert {
+  padding: var(--alert-padding);
+  border: 1px solid transparent;
+  border-radius: var(--alert-border-radius);
+}
+
+.alert-success {
+  color: var(--success-color);
+  background-color: var(--success-bg-color);
+  border-color: var(--success-border-color);
+}
+
+.alert-danger {
+  color: var(--danger-color);
+  background-color: var(--danger-bg-color);
+  border-color: var(--danger-border-color);
+}
+
+#error_explanation {
+  color: var(--error-color);
+  ul {
+    color: var(--error-color);
+    margin: 0 0 var(--error-margin-bottom) 0;
+  }
+}
+
+.field_with_errors input {
+  border: 1px solid var(--error-input-border-color);
+}
