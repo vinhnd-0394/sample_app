@@ -4,6 +4,17 @@
   padding: var(--alert-padding);
   border: 1px solid transparent;
   border-radius: var(--alert-border-radius);
+  animation: hideAlert 5s forwards;
+}
+
+@keyframes hideAlert {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .alert-success {
@@ -54,4 +65,12 @@
 .pagy.nav .current {
   background-color: var(--current-bg-color);
   font-weight: bold;
+}
+
+.two-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t "hello"
+      flash[:success] = t "register.success.message"
       redirect_to root_path
     else
       flash.now[:danger] = t "register.error"

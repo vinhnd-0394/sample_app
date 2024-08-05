@@ -10,6 +10,8 @@ vi:
       password: "Mật khẩu của bạn"
       submit: "Đăng ký"
     error: "Oops đã có lỗi xảy ra."
+    success:
+      message: "Đăng ký thành công"
   login:
     title: "Đăng nhập"
     form:
@@ -24,6 +26,8 @@ vi:
     title: "Đăng xuất"
     success:
       message: "Đăng xuất thành công"
+  post:
+    not_found: "Bài viết không tồn tại"
   datetime:
     distance_in_words:
       half_a_minute: "nửa phút"
@@ -31,32 +35,32 @@ vi:
         one: "ít hơn một phút"
         other: "ít hơn %{count} phút"
       x_minutes:
-        one: "khoảng một phút trước"
-        other: "khoảng %{count} phút trước"
+        one: "khoảng một phút"
+        other: "khoảng %{count} phút"
       less_than_x_hours:
         one: "ít hơn một giờ"
         other: "ít hơn %{count} giờ"
       x_hours:
-        one: "khoảng một giờ trước"
-        other: "khoảng %{count} giờ trước"
+        one: "khoảng một giờ"
+        other: "khoảng %{count} giờ"
       about_x_hours:
-        one: "khoảng một giờ trước"
-        other: "khoảng %{count} giờ trước"
+        one: "khoảng một giờ"
+        other: "khoảng %{count} giờ"
       x_days:
-        one: "một ngày trước"
-        other: "%{count} ngày trước"
+        one: "một ngày"
+        other: "%{count} ngày"
       about_x_months:
-        one: "khoảng một tháng trước"
-        other: "khoảng %{count} tháng trước"
+        one: "khoảng một tháng"
+        other: "khoảng %{count} tháng"
       x_months:
-        one: "một tháng trước"
-        other: "%{count} tháng trước"
+        one: "một tháng"
+        other: "%{count} tháng"
       about_x_years:
-        one: "khoảng một năm trước"
-        other: "khoảng %{count} năm trước"
+        one: "khoảng một năm"
+        other: "khoảng %{count} năm"
       over_x_years:
-        one: "hơn một năm trước"
-        other: "hơn %{count} năm trước"
+        one: "hơn một năm"
+        other: "hơn %{count} năm"
       almost_x_years:
         one: "gần một năm"
         other: "gần %{count} năm"

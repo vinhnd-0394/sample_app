@@ -7,17 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do
-  user = User.create!({
+  User.create!({
     name: Faker::Name.name,
     email: Faker::Internet.email(domain: "gmail.com"),
     password: "123456",
   })
+end
 
-  10.times do
-    Post.create!({
-      content: Faker::Lorem.paragraph,
-      user_id: user.id,
-      status: 1,
-    })
-  end
+users = User.pluck :id
+
+100.times do
+  Post.create!({
+    content: Faker::Markdown.sandwich(sentences: 6, repeat: 3),
+    user_id: users.sample,
+    status: 1,
+  })
 end

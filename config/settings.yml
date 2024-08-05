@@ -2,7 +2,7 @@ enabled_locales: ["en", "vi"]
 client:
   host: "localhost:3000"
 post:
-  content_max_length: 300
+  content_max_length: 1000
   limit: 10
 user:
   valid_email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

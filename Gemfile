@@ -39,6 +39,8 @@ gem "bcrypt", "~> 3.1.7"
 
 gem "pagy"
 
+gem "redcarpet", "~> 3.3", ">= 3.3.4"
+
 gem "tailwindcss-rails", "~> 2.3"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

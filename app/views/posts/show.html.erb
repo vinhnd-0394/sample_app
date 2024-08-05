@@ -1,0 +1,17 @@
+<div class="my-2">
+  <div class="flex items-center gap-4 mb-1">
+    <%= image_tag Settings.user.default_avatar_url,
+      alt: @post.user_name,
+      class: "object-cover w-[60px] h-[60px] border rounded-full"
+    %>
+    <div class="flex flex-col">
+      <h2 class="font-bold text-orange-500"><%= @post.user_name %></h2>
+      <small class="text-sm text-gray-500"><%= time_ago_in_words @post.created_at %> trước</small>
+    </div>
+  </div>
+  <div href="#" class="p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <p class="font-normal text-gray-700 dark:text-gray-400">
+        <%= markdown @post.content %>
+      </p>
+  </div>
+</div>
