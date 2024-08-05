@@ -10,3 +10,17 @@ vi:
       password: "Mật khẩu của bạn"
       submit: "Đăng ký"
     error: "Oops đã có lỗi xảy ra."
+  login:
+    title: "Đăng nhập"
+    form:
+      email: "Email của bạn"
+      password: "Mật khẩu của bạn"
+      submit: "Đăng nhập"
+    failed:
+      message: "Email hoặc mật khẩu không đúng"
+    success:
+      message: "Đăng nhập thành công"
+  logout:
+    title: "Đăng xuất"
+    success:
+      message: "Đăng xuất thành công"

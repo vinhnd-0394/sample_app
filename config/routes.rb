@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /vi|en/ do
-    resources :users, only: %i(new  create)
+    get "/register", to: "users#new"
+    post "/register", to: "users#create"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+
     root "static_page#index"
   end
 end
