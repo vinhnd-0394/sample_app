@@ -38,7 +38,61 @@ en:
         message: "Opps something went wrong."
       success:
         message: "Create post successfully"
+    update:
+      title: "Update post"
+      content: "Content"
+      status: "Status"
+      action: "Save"
+      failed:
+        message: "Opps something went wrong."
+      success:
+        message: "Update post successfully"
+    delete:
+      title: "Delete post"
+      confirm: "Are you sure you want to delete this post?"
+      action: "Delete"
+      failed:
+        message: "Opps something went wrong."
+      success:
+        message: "Delete post successfully"
     statuses:
       published: "Published"
       unpublished: "Unpublished"
     not_found: "Post not found"
+    not_owner: "You are not the owner of this post"
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_minutes:
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one: "about a minute"
+        other: "about %{count} minutes"
+      less_than_x_hours:
+        one: "less than an hour"
+        other: "less than %{count} hours"
+      x_hours:
+        one: "about an hour"
+        other: "about %{count} hours"
+      about_x_hours:
+        one: "about an hour"
+        other: "about %{count} hours"
+      x_days:
+        one: "a day"
+        other: "%{count} days"
+      about_x_months:
+        one: "about a month"
+        other: "about %{count} months"
+      x_months:
+        one: "a month"
+        other: "%{count} months"
+      about_x_years:
+        one: "about a year"
+        other: "about %{count} years"
+      over_x_years:
+        one: "over a year"
+        other: "over %{count} years"
+      almost_x_years:
+        one: "almost a year"
+        other: "almost %{count} years"

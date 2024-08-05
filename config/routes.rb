@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
-    resources :posts, only: %i(show create new)
+    resources :posts, except: :index
     root "posts#index"
   end
 end

@@ -15,4 +15,10 @@ class Post < ApplicationRecord
 
   scope :newest, ->{order(created_at: :desc)}
   scope :published, ->{where status: :published}
+
+  def is_owner? current_user
+    return false if current_user.blank?
+
+    user == current_user
+  end
 end
