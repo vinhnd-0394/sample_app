@@ -22,11 +22,25 @@ vi:
       message: "Email hoặc mật khẩu không đúng"
     success:
       message: "Đăng nhập thành công"
+    not_login:
+      message: "Bạn cần đăng nhập để thực hiện chức năng này"
   logout:
     title: "Đăng xuất"
     success:
       message: "Đăng xuất thành công"
   post:
+    create:
+      title: "Tạo bài viết"
+      content: "Nội dung"
+      status: "Trạng thái"
+      action: "Lưu"
+      failed:
+        message: "Opps đã có lỗi xảy ra."
+      success:
+        message: "Tạo bài viết thành công"
+    statuses:
+      published: "Công khai"
+      unpublished: "Riêng tư"
     not_found: "Bài viết không tồn tại"
   datetime:
     distance_in_words:
