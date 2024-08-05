@@ -24,3 +24,39 @@ vi:
     title: "Đăng xuất"
     success:
       message: "Đăng xuất thành công"
+  datetime:
+    distance_in_words:
+      half_a_minute: "nửa phút"
+      less_than_x_minutes:
+        one: "ít hơn một phút"
+        other: "ít hơn %{count} phút"
+      x_minutes:
+        one: "khoảng một phút trước"
+        other: "khoảng %{count} phút trước"
+      less_than_x_hours:
+        one: "ít hơn một giờ"
+        other: "ít hơn %{count} giờ"
+      x_hours:
+        one: "khoảng một giờ trước"
+        other: "khoảng %{count} giờ trước"
+      about_x_hours:
+        one: "khoảng một giờ trước"
+        other: "khoảng %{count} giờ trước"
+      x_days:
+        one: "một ngày trước"
+        other: "%{count} ngày trước"
+      about_x_months:
+        one: "khoảng một tháng trước"
+        other: "khoảng %{count} tháng trước"
+      x_months:
+        one: "một tháng trước"
+        other: "%{count} tháng trước"
+      about_x_years:
+        one: "khoảng một năm trước"
+        other: "khoảng %{count} năm trước"
+      over_x_years:
+        one: "hơn một năm trước"
+        other: "hơn %{count} năm trước"
+      almost_x_years:
+        one: "gần một năm"
+        other: "gần %{count} năm"
