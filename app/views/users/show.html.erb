@@ -12,11 +12,7 @@
     </div>
   </div>
   <div id="follow_button_<%= @user.id %>">
-    <% unless @user.is_following? current_user %>
-      <%= render "follow" %>
-    <% else %>
-      <%= render "unfollow" %>
-    <% end %>
+    <%= render @user.is_following?(current_user) ? "unfollow" : "follow" %>
   </div>
 </div>
 <div id="user_<%= @user.id %>_posts">

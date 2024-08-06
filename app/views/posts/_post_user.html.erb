@@ -1,9 +1,13 @@
-
-<% @user.posts.each do |post| %>
-  <div class="px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
-    <%= link_to post_path(post), class: "two-line" do %>
-      <p class="overflow-hidden text-ellipsis"><%= markdown post.content %></p>
-    <% end %>
-    <small class="text-sm text-gray-500"><%= time_ago_in_words post.created_at %></small>
-  </div>
+<% if @user.posts.any? %>
+  <% @user.posts.each do |post| %>
+    <div class="relative px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
+      <div id="like_<%= post.id %>" class="absolute top-0 right-0 mt-4 mr-4">
+          <%= render "posts/like_form", post: post %>
+      </div>
+      <%= link_to post_path(post), class: "two-line" do %>
+        <p class="overflow-hidden text-ellipsis"><%= markdown post.content %></p>
+      <% end %>
+      <small class="text-sm text-gray-500"><%= time_ago_in_words post.created_at %></small>
+    </div>
+  <% end %>
 <% end %>

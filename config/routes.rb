@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
     post "/follows/:id", to: "follows#create", as: "follow_user"
     delete "/unfollows/:id", to: "follows#destroy", as: "unfollow_user"
+    post "/likes/:id", to: "likes#create", as: "like_post"
+    delete "/unlikes/:id", to: "likes#destroy", as: "unlike_post"
     root "posts#index"
   end
 end

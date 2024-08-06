@@ -1,0 +1,6 @@
+<%= turbo_stream.replace "alert" do %>
+  <%= render "shared/alert" %>
+<% end %>
+<%= turbo_stream.update "like_#{@post.id}" do %>
+  <%= render "posts/like", post: @post %>
+<% end %>
