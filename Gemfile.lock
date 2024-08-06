@@ -91,6 +91,8 @@ GEM
     date (3.3.4)
     deep_merge (1.2.2)
     erubi (1.13.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.5)
@@ -131,6 +133,7 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
+    pagy (9.0.5)
     parallel (1.25.1)
     parser (3.3.4.0)
       ast (~> 2.4.1)
@@ -251,9 +254,11 @@ DEPENDENCIES
   bootsnap
   capybara
   config
+  faker
   importmap-rails
   jbuilder
   mysql2 (~> 0.5)
+  pagy
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.5)

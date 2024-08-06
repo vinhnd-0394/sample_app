@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  enum status: {public: 1, private: 0}
+  enum status: {published: 1, unpublished: 0}
 
   belongs_to :user
 
@@ -8,4 +8,6 @@ class Post < ApplicationRecord
 
   validates :content, :status, presence: true
   validates :content, length: {maximum: Settings.post.content_max_length}
+
+  delegate :name, to: :user, prefix: true
 end

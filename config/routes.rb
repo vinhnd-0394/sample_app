@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
-    root "static_page#index"
+    root "posts#index"
   end
 end

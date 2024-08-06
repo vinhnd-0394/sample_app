@@ -14,7 +14,9 @@
   <body>
     <%= render "layouts/header" %>
     <%= render "shared/alert" %>
-    <%= yield %>
+    <div class="w-4/5 mx-auto">
+      <%= yield %>
+    </div>
     <%= render "layouts/footer" %>
   </body>
 </html>

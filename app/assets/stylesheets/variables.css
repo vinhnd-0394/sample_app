@@ -1,4 +1,9 @@
 :root {
+  --text-white: #fff;
+  --primary-color: #4a90e2;
+  --primary-hover-color: #357abd;
+  --current-bg-color: #caa917;
+
   --alert-padding: 15px;
   --alert-border-radius: 4px;
 
