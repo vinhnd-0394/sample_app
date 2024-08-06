@@ -1,0 +1,8 @@
+<%= turbo_stream.replace "alert" do %>
+  <%= render "shared/alert" %>
+<% end %>
+<%= turbo_stream.update "follow_button_#{@user.id}" do %>
+  <%= render "users/follow" %>
+<% end %>
+<%= turbo_stream.update "user_#{@user.id}_posts" do %>
+<% end %>

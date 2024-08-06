@@ -1,0 +1,9 @@
+
+<% @user.posts.each do |post| %>
+  <div class="px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
+    <%= link_to post_path(post), class: "two-line" do %>
+      <p class="overflow-hidden text-ellipsis"><%= markdown post.content %></p>
+    <% end %>
+    <small class="text-sm text-gray-500"><%= time_ago_in_words post.created_at %></small>
+  </div>
+<% end %>

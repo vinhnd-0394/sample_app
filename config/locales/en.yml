@@ -60,6 +60,18 @@ en:
       unpublished: "Unpublished"
     not_found: "Post not found"
     not_owner: "You are not the owner of this post"
+  top_users:
+    title: "Top users"
+    post_count: "Post count: %{count}"
+  user:
+    created_at: "Created at: %{time}"
+    not_found: "User not found"
+    follow:
+      success: "Follow successfully"
+      failed: "Opps something went wrong."
+    unfollow:
+      success: "Unfollow successfully"
+      failed: "Opps something went wrong."
   datetime:
     distance_in_words:
       half_a_minute: "half a minute"

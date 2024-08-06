@@ -1,0 +1,15 @@
+<% if @top_users.any? %>
+  <h2 class="text-3xl font-bold text-center text-gray-600"><%= t "top_users.title" %></h2>
+  <% @top_users.each do |user| %>
+    <%= link_to user_path(user), class: "flex items-center gap-4 p-2 mb-2 duration-200 cursor-pointer hover:bg-gray-200" do %>
+      <%= image_tag Settings.user.default_avatar_url,
+        alt: user.name,
+        class: "object-cover w-[60px] h-[60px] border rounded-full"
+      %>
+      <div>
+        <h3 class="font-bold text-blue-500"><%= user.name %></h3>
+        <span class="text-xs text-gray-500"><%= t "top_users.post_count", count: user.post_count %></span>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

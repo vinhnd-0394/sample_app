@@ -6,7 +6,9 @@
         class: "object-cover w-[60px] h-[60px] border rounded-full"
       %>
       <div>
-        <h2 class="font-bold text-orange-500"><%= @post.user_name %></h2>
+        <h2 class="font-bold text-orange-500">
+          <%= link_to @post.user_name, user_path(@post.user_id) %>
+        </h2>
         <small class="text-sm text-gray-500"><%= time_ago_in_words @post.created_at %> trước</small>
       </div>
     </div>
