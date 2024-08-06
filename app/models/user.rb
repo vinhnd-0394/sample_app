@@ -54,12 +54,6 @@ class User < ApplicationRecord
     following << other_user unless self == other_user
   end
 
-  def is_liked? post = nil
-    return if post.blank?
-
-    liked_posts.include? post
-  end
-
   def is_following? user = nil
     return if user.blank?
 
