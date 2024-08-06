@@ -10,6 +10,8 @@ en:
       password: "Your password"
       submit: "Register"
     error: "Oops something went wrong."
+    success:
+      message: "Register successfully"
   login:
     title: "Login"
     form:
@@ -24,3 +26,5 @@ en:
     title: "Logout"
     success:
       message: "Logout successfully"
+  post:
+    not_found: "Post not found"

@@ -1,13 +1,15 @@
-<div class="px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800">
+<div class="px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
   <div class="flex gap-4">
     <%= image_tag Settings.user.default_avatar_url,
       alt: post.user_name,
       class: "object-cover w-[60px] h-[60px] border rounded-full"
     %>
     <div>
-    <h2 class="font-bold text-blue-500" ><%= post.user_name %></h2>
-    <p class="overflow-hidden text-ellipsis"><%= post.content %></p>
-    <small class="text-sm text-gray-500"><%= time_ago_in_words post.created_at %></small>
+      <h2 class="font-bold text-blue-500"><%= post.user_name %></h2>
+      <%= link_to post_path(post), class: "two-line" do %>
+        <p class="overflow-hidden text-ellipsis"><%= markdown post.content %></p>
+      <% end %>
+      <small class="text-sm text-gray-500"><%= time_ago_in_words post.created_at %> trước</small>
     </div>
   </div>
 </div>
