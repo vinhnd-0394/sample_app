@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   has_many :likers, through: :likes, source: :user
 
   validates :content, :status, presence: true
-  validates :content, length: {maximum: Settings.post.content_max_length}
+  validates :content, length: {maximum: Settings.digit.length_1000}
 
   delegate :name, to: :user, prefix: true
 

@@ -19,15 +19,19 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :name, presence: true
-  validates :email, presence: true,
-    format: {with: Settings.user.valid_email_regex}
+  validates :email, uniqueness: true,
+                    presence: true,
+                    format: {with: Settings.regex.email}
+  validates :name, presence: true,
+                    length: {maximum: Settings.digit.length_50}
+  validates :password, presence: true,
+                    length: {minimum: Settings.digit.length_6}
 
   delegate :count, to: :following, prefix: true
 
   delegate :count, to: :followers, prefix: true
 
-  scope :top_users, lambda {|limit = Settings.user.top_user_limit|
+  scope :top_users, lambda {|limit = Settings.limit.limit_10|
     left_joins(:posts)
       .where(posts: {status: :published})
       .group(:id)
