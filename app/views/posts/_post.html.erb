@@ -5,7 +5,7 @@
       class: "object-cover w-[60px] h-[60px] border rounded-full"
     %>
     <div>
-      <h2 class="font-bold text-blue-500"><%= post.user_name %></h2>
+      <%= link_to post.user_name, user_path(post.user_id), class: "font-bold text-blue-500" %>
       <%= link_to post_path(post), class: "two-line" do %>
         <p class="overflow-hidden text-ellipsis"><%= markdown post.content %></p>
       <% end %>

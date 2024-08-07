@@ -8,6 +8,7 @@ class PostsController < ApplicationController
                              .newest
                              .includes(:user),
                          limit: Settings.post.limit
+    @top_users = User.top_users Settings.user.top_user_limit || []
   end
 
   def create

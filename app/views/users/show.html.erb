@@ -1,0 +1,26 @@
+<div class="flex justify-between p-2 mb-2">
+  <div class="flex gap-4 ">
+    <%= image_tag Settings.user.default_avatar_url,
+      alt: @user.name,
+      class: "object-cover border"
+    %>
+    <div>
+      <h3 class="font-bold text-blue-500"><%= @user.name %></h3>
+      <h3 class="font-bold text-gray-500"><%= @user.email %></h3>
+      <p class="text-sm font-medium text-gray-500"><%= t "top_users.post_count", count: @user.post_count %></p>
+      <p class="text-xs font-medium text-gray-500"><%= t "user.created_at", time: time_ago_in_words(@user.created_at) %></p>
+    </div>
+  </div>
+  <div id="follow_button_<%= @user.id %>">
+    <% unless @user.is_following? current_user %>
+      <%= render "follow" %>
+    <% else %>
+      <%= render "unfollow" %>
+    <% end %>
+  </div>
+</div>
+<div id="user_<%= @user.id %>_posts">
+  <% if @user.is_following? current_user %>
+    <%= render "posts/post_user" %>
+  <% end %>
+</div>

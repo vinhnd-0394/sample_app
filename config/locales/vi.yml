@@ -59,6 +59,18 @@ vi:
       published: "Công khai"
       unpublished: "Riêng tư"
     not_found: "Không tìm thấy bài viết"
+  top_users:
+    title: "Người dùng hàng đầu"
+    post_count: "Số bài viết %{count}"
+  user:
+    created_at: "Ngày tạo: %{time}"
+    not_found: "Không tìm thấy người dùng"
+    follow:
+      success: "Bạn đang theo dõi người dùng này"
+      failed: "Opps đã có lỗi xảy ra."
+    unfollow:
+      success: "Bạn đã bỏ theo dõi người dùng này"
+      failed: "Opps đã có lỗi xảy ra."
   datetime:
     distance_in_words:
       half_a_minute: "nửa phút"

@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
+    resources :users, only: :show
     resources :posts, except: :index
+
+    post "/follows/:id", to: "follows#create", as: "follow_user"
+    delete "/unfollows/:id", to: "follows#destroy", as: "unfollow_user"
     root "posts#index"
   end
 end
