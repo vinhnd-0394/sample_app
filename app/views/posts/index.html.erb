@@ -1,4 +1,11 @@
-<div class="w-3/4 my-2">
-  <%= render @posts %>
-  <%== pagy_nav @pagy if @pagy.pages > 1 %>
+<div class="flex gap-4 my-2">
+  <div class="w-3/4">
+    <%= render @posts %>
+    <%== pagy_nav @pagy if @pagy.pages > 1 %>
+  </div>
+  <div class="w-1/4">
+    <% if logged_in? %>
+      <%= link_to t("post.create.title"), new_post_path, class: "bg-blue-500 text-white font-bold rounded w-full px-4 py-2 inline-block text-center" %>
+    <% end %>
+  </div>
 </div>

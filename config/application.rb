@@ -26,6 +26,6 @@ module RailsTutorial
     I18n.available_locales = [:vi, :en]
 
     # Set default locale to something other than :en
-    I18n.default_locale = :vi
+    I18n.default_locale = :en
   end
 end

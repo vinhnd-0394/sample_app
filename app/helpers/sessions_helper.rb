@@ -17,4 +17,11 @@ module SessionsHelper
     reset_session
     @current_user = nil
   end
+
+  def user_logged_in
+    return if logged_in?
+
+    flash[:danger] = t "login.not_login.message"
+    redirect_to login_path
+  end
 end

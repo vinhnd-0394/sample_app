@@ -22,9 +22,23 @@ en:
       message: "Invalid email or password"
     success:
       message: "Login successfully"
+    not_login:
+      message: "You need to login to perform this action"
   logout:
     title: "Logout"
     success:
       message: "Logout successfully"
   post:
+    create:
+      title: "Create post"
+      content: "Content"
+      status: "Status"
+      action: "Save"
+      failed:
+        message: "Opps something went wrong."
+      success:
+        message: "Create post successfully"
+    statuses:
+      published: "Published"
+      unpublished: "Unpublished"
     not_found: "Post not found"
