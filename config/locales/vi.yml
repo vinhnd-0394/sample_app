@@ -38,10 +38,27 @@ vi:
         message: "Opps đã có lỗi xảy ra."
       success:
         message: "Tạo bài viết thành công"
+    update:
+      title: "Cập nhật bài viết"
+      content: "Nội dung"
+      status: "Trạng thái"
+      action: "Lưu"
+      failed:
+        message: "Opps đã có lỗi xảy ra."
+      success:
+        message: "Cập nhật bài viết thành công"
+    delete:
+      title: "Xóa bài viết"
+      confirm: "Bạn có chắc chắn muốn xóa bài viết này không?"
+      action: "Xóa"
+      failed:
+        message: "Opps đã có lỗi xảy ra."
+      success:
+        message: "Xóa bài viết thành công"
     statuses:
       published: "Công khai"
       unpublished: "Riêng tư"
-    not_found: "Bài viết không tồn tại"
+    not_found: "Không tìm thấy bài viết"
   datetime:
     distance_in_words:
       half_a_minute: "nửa phút"
