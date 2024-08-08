@@ -1,0 +1,1 @@
+<%= render current_user&.is_liked?(post) ? "posts/unlike" : "posts/like", post: post %>

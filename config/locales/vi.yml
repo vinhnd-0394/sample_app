@@ -71,6 +71,12 @@ vi:
     unfollow:
       success: "Bạn đã bỏ theo dõi người dùng này"
       failed: "Opps đã có lỗi xảy ra."
+    like:
+      success: "Bạn đã thích bài viết này"
+      failed: "Opps đã có lỗi xảy ra."
+    unlike:
+      success: "Bạn đã bỏ thích bài viết này"
+      failed: "Opps đã có lỗi xảy ra."
   datetime:
     distance_in_words:
       half_a_minute: "nửa phút"

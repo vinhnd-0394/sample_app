@@ -72,6 +72,12 @@ en:
     unfollow:
       success: "Unfollow successfully"
       failed: "Opps something went wrong."
+    like:
+      success: "Like successfully"
+      failed: "Opps something went wrong."
+    unlike:
+      success: "Unlike successfully"
+      failed: "Opps something went wrong."
   datetime:
     distance_in_words:
       half_a_minute: "half a minute"

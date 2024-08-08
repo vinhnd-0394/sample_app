@@ -19,9 +19,12 @@
       </div>
     <% end %>
   </div>
-  <div href="#" class="p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-      <p class="font-normal text-gray-700 dark:text-gray-400">
-        <%= markdown @post.content %>
-      </p>
+  <div class="relative p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div id="like_<%= @post.id %>" class="absolute top-0 right-0 mt-4 mr-4">
+      <%= render "like_form", post: @post %>
+    </div>
+    <p class="font-normal text-gray-700 dark:text-gray-400">
+      <%= markdown @post.content %>
+    </p>
   </div>
 </div>

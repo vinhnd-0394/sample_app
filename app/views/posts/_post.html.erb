@@ -1,4 +1,7 @@
-<div class="px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
+<div class="relative px-8 py-4 mb-2 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:bg-slate-100">
+  <div id="like_<%= post.id %>" class="absolute top-0 right-0 mt-4 mr-4">
+    <%= render "like_form", post: post %>
+  </div>
   <div class="flex gap-4">
     <%= image_tag Settings.user.default_avatar_url,
       alt: post.user_name,
