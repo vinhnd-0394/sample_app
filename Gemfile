@@ -58,9 +58,9 @@ gem "bootsnap", require: false
 gem "config"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html
   gem "factory_bot_rails"
   gem "pry-rails"
+  gem "rails-controller-testing"
   gem "rspec-rails", "~> 6.1.0"
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false

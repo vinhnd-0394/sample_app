@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :user_logged_in, except: %i(index new show)
+  before_action :user_logged_in, except: %i(index show)
   before_action :find_post_by_id, except: %i(index new create)
   before_action :owner, only: %i(edit update destroy)
 
