@@ -7,8 +7,8 @@ class PostsController < ApplicationController
     @pagy, @posts = pagy Post.published
                              .newest
                              .includes(:user),
-                         limit: Settings.post.limit
-    @top_users = User.top_users Settings.user.top_user_limit || []
+                         limit: Settings.limit.limit_10
+    @top_users = User.top_users Settings.limit.limit_10 || []
   end
 
   def create

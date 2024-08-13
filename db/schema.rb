@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_01_041140) do
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "likes", "posts"
