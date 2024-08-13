@@ -29,6 +29,9 @@ vi:
     success:
       message: "Đăng xuất thành công"
   post:
+    get:
+      success: "Lấy dữ liệu thành công"
+      failed: "Lấy dữ liệu thất bại"
     create:
       title: "Tạo bài viết"
       content: "Nội dung"

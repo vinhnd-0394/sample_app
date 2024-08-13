@@ -29,6 +29,9 @@ en:
     success:
       message: "Logout successfully"
   post:
+    get:
+      success: "Get data successfully"
+      failed: "Opps something went wrong."
     create:
       title: "Create post"
       content: "Content"

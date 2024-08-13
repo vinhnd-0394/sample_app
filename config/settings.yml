@@ -9,5 +9,16 @@ digit:
   length_1000: 1000
 limit:
   limit_10: 10
+page_default: 1
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+http_status_codes:
+  ok: 200
+  created: 201
+  unauthorized: 401
+  forbidden: 403
+  not_found: 404
+  unprocessable_entity: 422
+  no_content: 204
+  bad_request: 400
+  server_error: 500
