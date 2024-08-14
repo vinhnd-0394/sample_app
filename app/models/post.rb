@@ -15,6 +15,11 @@ class Post < ApplicationRecord
 
   scope :newest, ->{order(created_at: :desc)}
   scope :published, ->{where status: :published}
+  scope :order_likes_count, lambda {|order = Settings.order.desc|
+                              left_joins(:likes)
+                                .group(:id)
+                                .order("COUNT(likes.id) #{order.upcase}")
+                            }
 
   def is_owner? current_user
     return false if current_user.blank?
@@ -25,6 +30,10 @@ class Post < ApplicationRecord
   class << self
     def ransackable_attributes(*)
       %w(content status created_at)
+    end
+
+    def ransackable_associations(*)
+      %w(user likers)
     end
   end
 end

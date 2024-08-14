@@ -4,9 +4,16 @@ class PostsController < ApplicationController
   before_action :owner, only: %i(edit update destroy)
 
   def index
-    @pagy, @posts = pagy Post.published
-                             .newest
-                             .includes(:user),
+    @q = Post.ransack(params[:q])
+    @query_results = @q.result(distinct: true)
+                       .published
+                       .order_likes_count(
+                         params.dig(:q, :s) || Settings.order.desc
+                       )
+                       .newest
+                       .includes(:user)
+
+    @pagy, @posts = pagy @query_results,
                          limit: Settings.limit.limit_10
     @top_users = User.top_users Settings.limit.limit_10 || []
   end

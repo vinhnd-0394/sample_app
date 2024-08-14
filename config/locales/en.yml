@@ -32,6 +32,15 @@ en:
     get:
       success: "Get data successfully"
       failed: "Opps something went wrong."
+    search:
+      title: "Search"
+      content: "Content"
+      author: "Author"
+      status: "Status"
+      like_count:
+        title: "Like count"
+        desc: "Descending"
+        asc: "Ascending"
     create:
       title: "Create post"
       content: "Content"

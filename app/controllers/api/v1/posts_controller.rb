@@ -17,7 +17,9 @@ class Api::V1::PostsController < Api::V1::ApplicationController
                          page: options[:page]
     response_ok(t("post.get.success"),
                 {
-                  posts: @posts,
+                  posts: ActiveModel::Serializer::CollectionSerializer.new(
+                    @posts, serializer: PostSerializer
+                  ),
                   metadata: pagy_metadata(@pagy)
                 })
   end

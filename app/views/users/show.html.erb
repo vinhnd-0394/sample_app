@@ -11,9 +11,11 @@
       <p class="text-xs font-medium text-gray-500"><%= t "user.created_at", time: time_ago_in_words(@user.created_at) %></p>
     </div>
   </div>
-  <div id="follow_button_<%= @user.id %>">
-    <%= render @user.is_following?(current_user) ? "unfollow" : "follow" %>
-  </div>
+  <% if current_user != @user %>
+    <div id="follow_button_<%= @user.id %>">
+      <%= render @user.is_following?(current_user) ? "unfollow" : "follow" %>
+    </div>
+  <% end %>
 </div>
 <div id="user_<%= @user.id %>_posts">
   <% if @user.is_following? current_user %>

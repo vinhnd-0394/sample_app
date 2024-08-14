@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   include MarkdownsHelper
   include SessionsHelper
+  include SearchsHelper
 
   before_action :set_locale
 
