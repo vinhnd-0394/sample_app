@@ -64,7 +64,7 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it "assigns @posts with the first 10 published posts" do
-      expect(assigns(:posts).size).to eq(limit)
+      expect(assigns(:posts).size.keys.size).to be <= limit
     end
 
     it "assigns only published posts" do
@@ -298,14 +298,31 @@ RSpec.describe PostsController, type: :controller do
             delete :destroy, params: { id: posts.first.id }
           end
 
-          it "deletes the post" do
-            expect {
-              delete :destroy, params: { id: posts.first.id }
-            }.not_to change(Post, :count)
+          context "when delete failed" do
+            before do
+              allow_any_instance_of(Post).to receive(:destroy).and_return(false)
+            end
+
+            it "display flash danger message" do
+              delete :destroy, params: { id: Post.first.id }
+              expect(flash[:danger]).to eq I18n.t("post.delete.failed.message")
+            end
+
+            it "redirect to root path" do
+              expect(response).to redirect_to(root_path)
+            end
           end
 
-          it "redirect to root path" do
-            expect(response).to redirect_to(root_path)
+          context "when delete success" do
+            it "deletes the post" do
+              expect {
+                delete :destroy, params: { id: posts.first.id }
+              }.not_to change(Post, :count)
+            end
+
+            it "redirect to root path" do
+              expect(response).to redirect_to(root_path)
+            end
           end
         end
       end

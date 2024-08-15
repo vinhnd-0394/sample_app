@@ -32,6 +32,15 @@ vi:
     get:
       success: "Lấy dữ liệu thành công"
       failed: "Lấy dữ liệu thất bại"
+    search:
+      title: "Tìm kiếm"
+      content: "Nội dung"
+      author: "Tác giả"
+      status: "Trạng thái"
+      like_count:
+        title: "Lượt thích"
+        desc: "Giảm dần"
+        asc: "Tăng dần"
     create:
       title: "Tạo bài viết"
       content: "Nội dung"

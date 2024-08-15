@@ -48,6 +48,10 @@ class User < ApplicationRecord
              end
       BCrypt::Password.create string, cost:
     end
+
+    def ransackable_attributes(*)
+      %w(name)
+    end
   end
 
   def like post
@@ -57,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def follow other_user
-    return if self == other_user || is_following?(other_user)
+    return if self == other_user || other_user.is_following?(self)
 
     following << other_user
   end
@@ -69,7 +73,7 @@ class User < ApplicationRecord
   end
 
   def is_following? user = nil
-    return if user.blank?
+    return if user.blank? || self == user
 
     followers.include? user
   end
@@ -85,7 +89,7 @@ class User < ApplicationRecord
   end
 
   def unfollow other_user
-    return unless self != other_user && is_following?(other_user)
+    return unless self != other_user && other_user.is_following?(self)
 
     following.delete other_user
   end

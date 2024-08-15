@@ -68,6 +68,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
   gem "shoulda-matchers", "~> 6.0"
+  gem "simplecov", require: false
 end
 
 group :development do

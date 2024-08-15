@@ -10,6 +10,9 @@ digit:
 limit:
   limit_10: 10
 page_default: 1
+order:
+  asc: "asc"
+  desc: "desc"
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 http_status_codes:
