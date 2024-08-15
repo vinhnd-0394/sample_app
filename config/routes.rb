@@ -14,5 +14,15 @@ Rails.application.routes.draw do
     post "/likes/:id", to: "likes#create", as: "like_post"
     delete "/unlikes/:id", to: "likes#destroy", as: "unlike_post"
     root "posts#index"
+
+    namespace "api" do
+      namespace "v1" do
+        resources :posts, only: %i(index create update)
+        post "/login", to: "sessions#create"
+        delete "/logout", to: "sessions#destroy"
+        post "/follows/:id", to: "follows#create"
+        delete "/unfollows/:id", to: "follows#destroy"
+      end
+    end
   end
 end

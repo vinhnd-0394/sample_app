@@ -21,4 +21,10 @@ class Post < ApplicationRecord
 
     user == current_user
   end
+
+  class << self
+    def ransackable_attributes(*)
+      %w(content status created_at)
+    end
+  end
 end

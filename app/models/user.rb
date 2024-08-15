@@ -51,11 +51,15 @@ class User < ApplicationRecord
   end
 
   def like post
+    return if is_liked? post
+
     liked_posts << post
   end
 
   def follow other_user
-    following << other_user unless self == other_user
+    return if self == other_user || is_following?(other_user)
+
+    following << other_user
   end
 
   def is_liked? post = nil
@@ -75,10 +79,14 @@ class User < ApplicationRecord
   end
 
   def unlike post
+    return unless is_liked? post
+
     liked_posts.delete post
   end
 
   def unfollow other_user
+    return unless self != other_user && is_following?(other_user)
+
     following.delete other_user
   end
 
